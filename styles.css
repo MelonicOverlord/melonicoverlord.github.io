@@ -35,7 +35,7 @@ a:visited {
 }
 
 a:hover {
-    color: lime;
+    color: green;
     transition-duration: 0.4s;
 }
 
