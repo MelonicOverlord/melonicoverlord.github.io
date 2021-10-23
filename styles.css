@@ -1,0 +1,52 @@
+html{
+    background-image: url("bkg.jpg");
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainheader{
+    font-size: 200px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 75px;
+}
+
+
+.clock {
+    font-size: 55px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+.topnav{
+    display: flex;
+    padding-right:75px;
+    border-radius: 17px;
+    text-align: center;
+    background-color: rgba(204, 204, 204, 0.342);
+}
+  
+.topnav *{
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: background-color .8s;
+    border: black, solid, 15px;
+    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+.topnav *:hover{
+    background-color: #ffffff9f;
+}
+  
+.topnav .dropdown-content a:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgba(255, 255, 255, 0.637);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
