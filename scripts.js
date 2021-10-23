@@ -10,7 +10,7 @@ function clock() {
         
         seconds = time.getSeconds();
     
-    document.querySelectorAll('.clock')[0].innerHTML = `The Time Is: ${harold(hours)}:${harold(minutes)}:${harold(seconds)}`;
+    document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
       
       function harold(standIn) {
         if (standIn < 10) {
