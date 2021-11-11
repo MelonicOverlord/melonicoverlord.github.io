@@ -48,7 +48,7 @@ html {
 
 .topnav:after {
     content: "";
-    background-color: white;
+    background-image: url("bkg.jpg");
     position: absolute;
     left: 0;
     top: 0px;
