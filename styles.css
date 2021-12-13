@@ -71,3 +71,7 @@ html {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.contacts {
+    text-align: center;
+}
