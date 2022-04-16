@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    color: white;
 }
 html {
     background-image: url("bkg.jpg");
