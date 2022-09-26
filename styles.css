@@ -1,95 +1,356 @@
-body {
-    overflow-x: hidden;
-    color: #B8B8B8;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,400;1,700&family=Roboto:wght@300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html {
-    background-image: url("bkg.jpg");
-    object-fit: fill;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Font Styles */
+
+h1 {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
 }
 
-.mainheader {
-    font-size: 200px;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    padding-top: 75px;
+h2 {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  color:#ACB0B9;
 }
 
-.clock {
-    font-size: 70px;
-    text-align: center;
-    padding-top: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.desc {
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  padding-top: 5px;
+ }
+
+p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color:#ACB0B9;
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.25);
 }
 
-.topnav {
+/*End of font styles*/
+
+body{
+  background-image: url("bkg.jpg");
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  animation: fade-and-come-down 1.25s forwards;
+}
+
+.header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  display: grid;
+  grid-template-columns: 150px auto;
+  column-gap: 30px;
+  place-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(180deg, #0c5221 0%, #2abd4a 100%);
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
+  text-shadow: 0px -4px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+}
+
+
+.logo {
+  float:left;
+}
+
+.headertxt {
+  text-align:
+  left;
+  float:
+  right;
+}
+
+.header--home {
+  overflow: hidden;
+}
+
+@keyframes fade-and-come-down {
+  from{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  .navbar {
+    overflow: hidden;
+    background: linear-gradient(180deg, #2E3337 0%, #23272A 96.5%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: flex;
-    padding-right: 75px;
-    border-radius: 4px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  .navbar a {
+    float: left;
+    color:#8D8F9D;
     text-align: center;
-    position: sticky;
-    z-index: 99;
-    overflow: hidden;
-    top: 4px;
-    background-color: #00000098;
-}
-
-.topnav * {
-    padding: 20px;
+    padding: 14px 24px;
     text-decoration: none;
-    color: #B8B8B8;
-    transition: all 0.2s ease;
-    border: black, solid, 15px;
-    border-radius: 4px;
-    position: relative;
+    text-shadow: 0px -4px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .navbuttons {
+    display:
+    grid;
+    justify-content: start;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    align-items: center;
+  }
+
+
+  .vl {
+    width: 1px;
+    height: 30px;
+    background: #494C53;
+    box-shadow: -1.5px 0px 0px rgb(0 0 0 / 25%);
+  }
+
+  .dropdown {
+    float: right;
     overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+    font-family: 'Roboto Mono';
+  }
+  
+  .dropdown .dropbtn {
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #8D8F9D;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: #2fd152;
+    text-shadow: 0px 0px 19px #2fd152, 0px -4px 0px rgba(0, 0, 0, 0.25);
 
-.topnav:after {
-    content: "";
+  }
+
+  .dropdown-content {
+    display: none;
     position: absolute;
-    left: 0;
-    top: 0px;
-    transform: scale(2);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.topnav *:hover {
-    background-color: #0000007a;
-}
-
-.topnav .dropdown-content a:hover {
-    background-color: rgb(250, 250, 250);
-    color: rgba(255, 255, 255, 0.637);
-}
-
-.dropdown:hover .dropdown-content {
+    background-color: #24282b;
+    margin-left: 25px;
+    width:150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: #8D8F9D;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
+    text-align: right;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+
+.textbg{
+  background: #0b0a0d;
+  background: linear-gradient(180deg, #282A2E 0%, #2E3337 86.46%);
+  margin-top: 20px;
+  padding: 15px;
+  filter: drop-shadow(0px 6px 0px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
 }
 
-.contacts {
-    text-align: center;
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 38px;
+}
+
+#respond {
+  margin-top: 40px;
+}
+
+.head1 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.head1 img {
+  margin-left: 0%;
+  transform: translateX(0%);
+  width: 100%;
+}
+
+.head2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.head2 img {
+  width: 100%;
+  transform: translateX(0);
+  margin-left: 0;
+}
+
+.head3 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.head3 img {
+  width: 100%;
+  margin-left: 0;
+  transform: translateX(0);
+}
+
+.head4 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.head4 img {
+  width: 100%;
+  margin-left: 0;
+  transform: translateX(0);
+}
+
+.head5 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.head5 img {
+  margin-left: 0;
+  transform: translateX(0);
+  width: 100%;
+}
+
+.head6 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.head6 img {
+  width: 100%;
+  margin-left: 0;
+  transform: translateX(0);
 }
 
 .gallery {
-    display:block;
+    display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
-    text-align: center;
 }
 
-
+@media only screen and (max-width: 930px) {
+  .gallery {
+        grid-template-columns: auto auto;
+  }
+}
 
 .galleryitem {
-  float: center;
+  float: left;
   height: 95%;
-  margin-top: 30px;
+  background: #0b0a0d;
+  background: linear-gradient(180deg, #282A2E 0%, #2E3337 86.46%);
+  margin-top: 20px;
   text-align: center;
+  padding: 15px;
   filter: drop-shadow(0px 6px 0px rgba(0, 0, 0, 0.25));
-  border-radius: 15px;
-  border: 3px, solid, black;
+  border-radius: 5px;
+}
+
+.discordframe {
+  padding-top: 20px;
+  float:
+  center;
+}
+
+  .on a {
+    color: #2fd152;
+    text-shadow: 0px 0px 19px #2fd152, 0px -4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .clock {
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
